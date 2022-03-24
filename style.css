@@ -9,22 +9,23 @@
 }
 
 body {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
   background-color: black;
   width: 100vw;
+}
 
-  display: grid;
-  grid-template-columns: 250px 250px;
-  grid-template-rows: 100px 300px 100px;
-  column-gap: 30px;
-  row-gap: 50px;
+.sort-box {
+  display: flex;
+  flex-direction: row;
 }
 
 .section {
   display: flex;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
   height: fit-content;
@@ -41,7 +42,6 @@ body {
 }
 
 .btns-box {
-  grid-column: 1 / span 2;
   /* display: flex;
   flex-direction: row; */
   width: fit-content;
@@ -116,8 +116,15 @@ a.gitLink:hover {
 }
 
 @media (max-width: 750px) {
+  .sort-box {
+    flex-direction: column;
+  }
   .section {
+    margin: 0.5rem auto;
     height: fit-content;
+  }
+  .title {
+    font-size: 1.5rem;
   }
   .footer {
     margin: 3rem auto;
