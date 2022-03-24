@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --box-height-width: 215px;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  background-color: black;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 100px 300px 100px;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+.title,
+.btns-box h1 {
+  font-size: 2rem;
+  color: white;
+  width: fit-content;
+  margin: 0.5rem auto;
+}
+
+.btns-box {
+  grid-column: 1 / span 2;
+  /* display: flex;
+  flex-direction: row; */
+  width: fit-content;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  background-color: steelblue;
+  border-radius: 10px;
+  margin: 1rem 3px;
+  width: 6rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  background-color: rgb(82, 165, 234);
+  cursor: pointer;
+}
+
+.main-container {
+  position: relative;
+  background-color: slategray;
+  width: var(--box-height-width);
+  height: var(--box-height-width);
+  min-width: var(--box-height-width);
+  min-height: var(--box-height-width);
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 18px 5px rgba(0, 0, 0, 0.24);
+  transition: all 1s ease;
+}
+
+.column {
+  background-color: aqua;
+  position: absolute;
+  height: 10rem;
+  width: 5px;
+}
+
+.footer {
+  grid-column: 1 / span 2;
+
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: bolder;
+}
+
+a.gitLink {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 2rem;
+  width: fit-content;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+  letter-spacing: 2px;
+}
+
+a.gitLink:hover {
+  text-decoration: underline;
+  background-color: rgb(61, 61, 61);
+}
+
+.fa-github {
+  font-size: 2rem;
+}
+
+@media (max-width: 750px) {
+  .section {
+    height: fit-content;
+  }
+  .footer {
+    margin: 3rem auto;
+  }
+}
