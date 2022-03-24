@@ -59,6 +59,8 @@ const toggleColumns = (col1, col2) => {
 }
 
 const selectionSort = async (arr, timeOut) => {
+  disableBTN(randomizeBTN);
+  disableBTN(sortBTN);
   for (let i = 0; i < arr.length; i++) {
     let min = i
 
@@ -84,12 +86,13 @@ const selectionSort = async (arr, timeOut) => {
     }
 
   }
+  restoreBTN(randomizeBTN);
+  restoreBTN(sortBTN);
 }
 
 const bubbleSort = async (arr, timeOut) => {
   let noSwaps;
-  disableBTN(randomizeBTN);
-  disableBTN(sortBTN);
+
 
   for (let i = arr.length; i > 0; i--) {
 
@@ -111,18 +114,18 @@ const bubbleSort = async (arr, timeOut) => {
     if (noSwaps) break;
   }
 
-  restoreBTN(randomizeBTN);
-  restoreBTN(sortBTN);
+
 }
 
+
 const sortColumns = async () => {
-  preventInterruption = true;
+
   const timeOut = 100;
 
   selectionSort(selectionColumns, timeOut)
   bubbleSort(bubbleColumns, timeOut)
 
-  preventInterruption = false;
+
 }
 
 const randomize = () => {
